@@ -29,8 +29,8 @@ public class CommandKilledList implements CommandExecutor {
 		
 		if(target.getWorld() == Bukkit.getServer().getWorld("Test")) {
 			target.sendMessage("§e§l Список последних 10 жертв насилия: ");
-			for(int c = 0; c < 10; c++) {
-				try{target.sendMessage(" * " + data.getStringList(target.getName() + ".killed").get(data.getStringList(target.getName() + ".killed").toArray().length-c));} catch(Exception e) {}
+			for(int c = 0; c < 11; c++) {
+				try{target.sendMessage(" *" + data.getStringList(target.getName() + ".killed").get(data.getStringList(target.getName() + ".killed").toArray().length-c-1));} catch(Exception e) {}
 			}
 		}
 		else {
